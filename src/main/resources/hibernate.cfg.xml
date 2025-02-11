@@ -6,23 +6,27 @@
     <session-factory>
         <!--  JDBC bbdd Ajustes de coneccion-->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url"> jdbc:mysql://localhost:3306/hibernate</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
 
         <!-- jdbc connection pool settings-->
 
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
-        <property name=""></property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statement">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+
+        <!-- sql dialect-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- echo all executed SQL to stdout-->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!-- drop and re-create the base de datos schema on startup-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="models.Alumno"/>
     </session-factory>
 </hibernate-configuration>
