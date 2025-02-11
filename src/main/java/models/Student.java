@@ -4,21 +4,28 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class Alumno {
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id ;
+    private int id ;
     private String nombre;
     private String email;
     private float averageMark;
 
-    public Alumno(){}
+    public Student(){}
 
-    public Long getId() {
+    public Student(int id, String nombre, String email, float averageMark) {
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.averageMark = averageMark;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -30,19 +37,19 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public float getAverageMark() {
         return averageMark;
     }
 
     public void setAverageMark(float averageMark) {
         this.averageMark = averageMark;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
