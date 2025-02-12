@@ -9,20 +9,17 @@ public class HelloHibernateApp {
 
         // Create new students
         Student student1 = new Student();
-        student1.setId(1);
-        student1.setNombre("Amit Sharma");
+        student1.setNombre("nuevo dos");
         student1.setEmail("amit.sharma@example.com");
         student1.setAverageMark(2.0f);
 
         Student student2 = new Student();
-        student2.setId(2);
-        student2.setNombre("Priya Singh");
+        student2.setNombre("nuevo tres");
         student2.setEmail("priya.singh@example.com");
         student2.setAverageMark(4.76f);
 
         Student es = new Student();
-        es.setId(3);
-        es.setNombre("nuevoooo");
+        es.setNombre("nuevoooo cuatro");
         es.setEmail("nuevooo@gmail.com");
         es.setAverageMark(4.76f);
         // Save students
