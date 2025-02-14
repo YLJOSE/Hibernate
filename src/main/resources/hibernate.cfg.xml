@@ -6,7 +6,7 @@
     <session-factory>
         <!--  JDBC bbdd Ajustes de coneccion-->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/test</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/administracion</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
 
@@ -26,11 +26,13 @@
         <property name="hibernate.format_sql">true</property>
         <!-- drop and re-create the base de datos schema on startup-->
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping resource="Alumno.hbm.xml"/>
-        <mapping class="models.Student"/>
-        <mapping class="models.User"/>
-        <mapping class="models.Address"/>
-        <mapping class="models.Cart"/>
-        <mapping class="models.Item"/>
+<!--        <mapping resource="Alumno.hbm.xml"/>-->
+<!--        <mapping class="models.Student"/>-->
+<!--        <mapping class="models.User"/>-->
+<!--        <mapping class="models.Address"/>-->
+<!--        <mapping class="models.Cart"/>-->
+<!--        <mapping class="models.Item"/>-->
+        <mapping class="EjercicioAcualizado.Objetos.Address"/>
+        <mapping class="EjercicioAcualizado.Objetos.Persona"/>
     </session-factory>
 </hibernate-configuration>
