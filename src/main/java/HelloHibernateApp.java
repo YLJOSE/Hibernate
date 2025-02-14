@@ -1,27 +1,98 @@
+import DAOS.CartDAO;
+import DAOS.ItemDAO;
 import DAOS.StudentDAO;
 import DAOS.UserDAO;
 import jakarta.transaction.SystemException;
-import models.Address;
-import models.Student;
+import models.*;
 import Utils.HibernateUtil;
-import models.User;
 
 public class HelloHibernateApp {
     public static void main(String[] args) {
 
-        UserDAO userDAO = new UserDAO();
+        /***
+         * de carrito a item es de uno a muchos y de item a carrito es de muchos a uno
+         * **/
 
-        Address address = new Address();
-        User user = new User();
+//        CartDAO cartDAO = new CartDAO();
+//        ItemDAO itemDAO = new ItemDAO();
+//
+////        Cart cart = new Cart();
+////        cart.setName("carrito uno");
+////
+//
+//        Cart cart2 = new Cart();
+//        cart2.setName("carrito dos");
+////
+////        try {
+////            cartDAO.saveCart(cart2);
+////        } catch (SystemException e) {
+////            throw new RuntimeException(e);
+////        }
+//
+//        Item item7 = new Item();
+//        item7.setCart(cart2);
+//        item7.setName("Juguete siuuuu");
+//
+//        item7.setCart(cartDAO.getCartById(2));
+//
+//        try {
+//            itemDAO.saveItem(item7);
+//        } catch (SystemException e) {
+//            throw new RuntimeException(e);
+//        }
 
-        address.setFullDescription("nomlo sé broooo jajajaj");
-        user.setAddress(address);
+//        Item item = new Item();
+//        item.setCart(cartDAO.getCartById(1));
+//        item.setName("Juguete de webds   1");
+//
+//        Item item1 = new Item();
+//        item1.setCart(cartDAO.getCartById(1));
+//        item1.setName("Juguete de webds  2 ");
+//
+//        Item item2 = new Item();
+//        item2.setCart(cartDAO.getCartById(1));
+//        item2.setName("Juguete de webds  3  ");
+//
+//        Item item3 = new Item();
+//        item3.setCart(cartDAO.getCartById(1));
+//        item3.setName("Juguete de webds  4  ");
+//
+//        Item item4 = new Item();
+//        item4.setCart(cartDAO.getCartById(1));
+//        item4.setName("Juguete de webds  5  ");
+//
+//        try {
+//            itemDAO.saveItem(item);
+//            itemDAO.saveItem(item1);
+//            itemDAO.saveItem(item2);
+//            itemDAO.saveItem(item3);
+//            itemDAO.saveItem(item4);
+//        } catch (SystemException e) {
+//            throw new RuntimeException(e);
+//        }
+//        System.out.println("-----------------------------------------");
 
-        try {
-            userDAO.saveUser(user);
-        } catch (SystemException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            cartDAO.saveCart(cart);
+//        } catch (SystemException e) {
+//            throw new RuntimeException(e);
+//        }
+
+/**
+ * User es uno a uno**/
+//        UserDAO userDAO = new UserDAO();
+//
+//        Address address = new Address();
+//        User user = new User();
+//
+//        address.setFullDescription("nomlo sé broooo jajajaj");
+//        user.setAddress(address);
+//
+//        try {
+//            userDAO.saveUser(user);
+//        } catch (SystemException e) {
+//            throw new RuntimeException(e);
+//        }
 
 //        StudentDAO studentDAO = new StudentDAO();
 //
@@ -71,7 +142,7 @@ public class HelloHibernateApp {
 //        students.forEach(student -> System.out.println(student.getNombre() + " - " + student.getEmail()));
 //
 //        // Delete student
-  //    studentDAO.deleteStudent(0);
+        //    studentDAO.deleteStudent(0);
 //
 //        // Get all students after deletion
 //        students = studentDAO.getAllStudents();

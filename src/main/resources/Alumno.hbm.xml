@@ -9,7 +9,7 @@
 
         <id name = "id" type = "int" column="id">
             <!-- <generator class="native"></generator>-->
-            <generator class="native"></generator>ç
+            <generator class="native"></generator>
         </id>
 
         <property name="averageMark" column="averageMark" type="float"/>
