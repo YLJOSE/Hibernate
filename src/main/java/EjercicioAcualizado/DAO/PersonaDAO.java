@@ -3,8 +3,6 @@ package EjercicioAcualizado.DAO;
 import EjercicioAcualizado.Generics.DAO;
 import EjercicioAcualizado.Objetos.Persona;
 import Utils.HibernateUtil;
-import models.Student;
-import models.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

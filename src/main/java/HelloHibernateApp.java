@@ -13,12 +13,12 @@ public class HelloHibernateApp {
          * de carrito a item es de uno a muchos y de item a carrito es de muchos a uno
          * **/
 
+////
 //        CartDAO cartDAO = new CartDAO();
 //        ItemDAO itemDAO = new ItemDAO();
 //
 ////        Cart cart = new Cart();
 ////        cart.setName("carrito uno");
-////
 //
 //        Cart cart2 = new Cart();
 //        cart2.setName("carrito dos");
