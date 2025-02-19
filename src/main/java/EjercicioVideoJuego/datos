@@ -1,0 +1,5 @@
+@OneToOne Indica que el objeto es parte de una relación 1-1
+@ManyToOne Indica que el objeto es parte de una relación N-1. En este caso el atributo sería el lado 1
+@OneToMany Indica que el objeto es parte de una relación 1-N. En este caso el atributo sería el lado N
+@ManyToMany Indica que el objeto es parte de una relación N-M.
+ En este caso se indica la tabla que mantiene la referencia entre las tablas y los campos que hacen el papel de claves ajenas en la base de datos
